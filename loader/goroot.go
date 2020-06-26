@@ -182,13 +182,16 @@ func pathsToOverride(needsSyscallPackage bool) map[string]bool {
 		"internal/":             true,
 		"internal/bytealg/":     false,
 		"internal/reflectlite/": false,
+		"internal/singleflight": false,
 		"internal/task/":        false,
 		"machine/":              false,
+		"net/":					 false,
 		"os/":                   true,
 		"reflect/":              false,
 		"runtime/":              false,
 		"sync/":                 true,
 		"testing/":              false,
+
 	}
 	if needsSyscallPackage {
 		paths["syscall/"] = true // include syscall/js
